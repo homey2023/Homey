@@ -7,11 +7,11 @@ First off, thank you for considering contributing to homey.
 ### Reporting Bugs
 
 - GitHub의 [Issues](https://github.com/homey2023/Homey/issues)에서 이미 제보된 버그인지 확인하세요.
-- 동일한 문제를 다루는 열린 이슈를 찾을 수 없다면, [New Issue](https://github.com/homey2023/Homey/issues/new). **제목과 명확한 설명**을 포함하고 가능한 한 많은 관련 정보와 **code sample** 또는 **executable test case**를 제공하여 예상되는 동작이 발생하지 않는 것을 보여주십시오.
+- 동일한 문제를 다루는 열린 이슈를 찾을 수 없다면, [New Issue](https://github.com/homey2023/Homey/issues/new/choose). **제목과 명확한 설명**을 포함하고 가능한 한 많은 관련 정보와 **code sample** 또는 **executable test case**를 제공하여 예상되는 동작이 발생하지 않는 것을 보여주십시오.
 
 ### Suggesting Enhancements
 
-- 제안에 대한 새로운 [New Issue](https://github.com/homey2023/Homey/issues/new)를 엽니다. **명확한 제목과 설명**을 포함하고 가능한 한 많은 관련 정보를 제공하며 새 기능이나 개선 사항을 구현하기 위한 **Step-by-Step**을 포함하세요.
+- 제안에 대한 새로운 [New Issue](https://github.com/homey2023/Homey/issues/new/choose)를 엽니다. **명확한 제목과 설명**을 포함하고 가능한 한 많은 관련 정보를 제공하며 새 기능이나 개선 사항을 구현하기 위한 **Step-by-Step**을 포함하세요.
 
 ### Pull Requests
 
