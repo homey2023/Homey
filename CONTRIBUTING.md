@@ -46,10 +46,12 @@ More detailed explanatory text, if necessary.
 
 #### 4. 제목 행의 첫 글자는 대문자로 시작
 `readme file modification` X
+
 `Readme file modification` O
 
 #### 5. 제목 행 끝에 마침표를 넣지 않는다
 `Open the door.` X
+
 `Open the door` O
 
 #### 6. 제목 행에 명령문을 사용한다
@@ -95,7 +97,7 @@ See also: #456, #789
 ### Branches Convention
 
 브랜치 명은 다음 형식을 사용합니다:
-<type>/<short-description> or <type>/issue-<issue-number>/<short-description>
+`<type>/<short-description>` or `<type>/issue-<issue-number>/<short-description>`
 
 여기서 `<type>`은 아래에 나열된 미리 정의된 branch type 중 하나이고, `<short-description>`은 브랜치 목적의 간결하고 설명적인 요약입니다. 글자는 모두 소문자로 작성하며, 단어 사이에는 `-`를 사용하는 **kebab-case**를 사용합니다.
 
