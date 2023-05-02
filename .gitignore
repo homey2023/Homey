@@ -1,0 +1,65 @@
+    # .gitignore
+
+# Flutter
+**/ios/Flutter/.last_build_id
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/android/app/src/main/assets/flutter_assets/
+**/android/app/src/main/jniLibs/
+**/android/app/src/debug/assets/flutter_assets/
+**/android/app/src/profile/assets/flutter_assets/
+**/android/app/src/main/assets/flutter_assets/LICENSE
+**/android/app/src/main/assets/flutter_assets/NOTICES
+**/android/app/src/main/assets/flutter_assets/fonts/
+**/android/app/src/main/assets/flutter_assets/packages/
+**/android/app/src/main/generated/
+
+# Flutter/Dart/Pub related
+**/pubspec.lock
+.packages
+
+# Flutter/Dart build artifacts
+**/build/
+
+# Flutter/Dart/Dartdoc related
+**/doc/api/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# macOS
+.DS_Store
+**/.flutter-plugins-dependencies
+**/Pods/
+
+# Flask
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+*.egg
+*.log
+*.pot
+*.pyc
+*.pyo
+*.mo
+*.tmp*
+*.bak
+*.swp
+*.sqlite
+*.db
+*.db-journal
+instance/
+venv/
