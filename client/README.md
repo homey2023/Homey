@@ -4,6 +4,7 @@ Flutter app files
 
 아래 복붙하시고, YOUR KEY HERE 부분에 google map API key 만들어서 넣어주시면 됩니당.
 
+'''
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.homey_client">
     <uses-permission android:name='android.permission.ACCESS_COARSE_LOCATION' />
@@ -42,4 +43,4 @@ Flutter app files
                android:value="YOUR KEY HERE"/>
     </application>
 </manifest>
-
+'''
