@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../assets/building_dummy.dart';
+import '../building_dummy.dart';
 import '../models/building.dart';
 import '../screens/building_detail_page.dart';
 
-class BuildingListTile extends StatelessWidget {
-  BuildingListTile({super.key, required this.index});
+class MainListTile extends StatelessWidget {
+  MainListTile({super.key, required this.index});
 
   int index;
 
@@ -29,7 +29,7 @@ class BuildingListTile extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => BuildingDetail(
+              builder: (context) => BuildingDetailPage(
                 building: buildingData[index],
               ),
             ),

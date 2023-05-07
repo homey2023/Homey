@@ -3,17 +3,17 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:location/location.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import '../widgets/map.dart';
-import '../widgets/bottom_sheet.dart';
+import '../widgets/main_map.dart';
+import '../widgets/main_sheet.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _HomeState extends State<Home> {
+class _MainPageState extends State<MainPage> {
   // 현재 위치 변수
   LocationData? currentLocation;
 
@@ -63,9 +63,9 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [
-          Map(currentLocation: currentLocation),
-          const DraggableSheet(),
+        children: const [
+          MainMap(),
+          MainSheet(),
         ],
       ),
     );
