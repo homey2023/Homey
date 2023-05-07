@@ -25,7 +25,7 @@ class _MainPageState extends State<MainPage> {
       return;
     } else if (locationRequestStatus.isDenied) {
       Fluttertoast.showToast(
-          msg: "필수권한",
+          msg: "필수권한입니다",
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
