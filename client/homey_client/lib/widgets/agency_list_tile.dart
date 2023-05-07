@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../screens/agency_detail_page.dart';
+import '../screens/agency_detail.dart';
 
 class AgencyListTile extends StatefulWidget {
   AgencyListTile({super.key, required this.index});

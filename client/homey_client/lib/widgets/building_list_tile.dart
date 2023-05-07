@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../assets/building_dummy.dart';
 import '../models/building.dart';
-import '../screens/building_detail_page.dart';
+import '../screens/building_detail.dart';
 
 class BuildingListTile extends StatelessWidget {
   BuildingListTile({super.key, required this.index});

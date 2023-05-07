@@ -4,7 +4,7 @@ import 'package:location/location.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import '../widgets/map.dart';
-import '../widgets/bottom_sheet.dart';
+import '../widgets/draggable_sheet.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
