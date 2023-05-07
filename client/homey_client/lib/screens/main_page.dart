@@ -49,7 +49,7 @@ class _MainPageState extends State<MainPage> {
     });
   }
 
-  // 처음 페이지에 들어오면 실행하는 함수
+  // 맨처음 페이지에 들어오면 실행하는 함수
   @override
   void initState() {
     super.initState();
