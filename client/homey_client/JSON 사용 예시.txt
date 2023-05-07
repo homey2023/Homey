@@ -1,0 +1,24 @@
+JSON 사용 예시
+
+JSON 보낼 때
+Realter myRealter = Realter(
+  name: "John Smith",
+  career: 5,
+  merits: ["Great communication", "Extremely knowledgeable"],
+  rating: 4,
+  review: ["John was an excellent realtor to work with."],
+);
+
+Map<String, dynamic> realterJson = myRealter.toJson();
+
+print(realterJson); // {"name": "John Smith", "career": 5, "merits": ["Great communication", "Extremely knowledgeable"], "rating": 4, "review": ["John was an excellent realtor to work with."]}
+
+
+JSON 가져올 때
+Map<String, dynamic> realterJson = {"name": "John Smith", "career": 5, "merits": ["Great communication", "Extremely knowledgeable"], "rating": 4, "review": ["John was an excellent realtor to work with."]};
+
+Realter myRealter = Realter.fromJson(realterJson);
+
+print(myRealter.name); // "John Smith"
+print(myRealter.rating); // 4
+print(myRealter.merits[0]); // "Great communication"
