@@ -12,7 +12,7 @@ class MainMap extends StatelessWidget {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         return SizedBox(
-          height: constraints.maxHeight * 0.85,
+          height: constraints.maxHeight * 0.7,
           child: currentLocation == null // 현재 위치가 없다면 loading. 있으면 지도 띄움
               ? const Center(
                   child: Text('loading'),

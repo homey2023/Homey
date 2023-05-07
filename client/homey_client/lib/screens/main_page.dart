@@ -65,7 +65,7 @@ class _MainPageState extends State<MainPage> {
       body: Stack(
         children: [
           MainMap(currentLocation: currentLocation),
-          MainSheet(),
+          const MainSheet(),
         ],
       ),
     );
