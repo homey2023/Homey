@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Agency one",
+    "realters": [
+      {
+        "name": "John Smith",
+        "career": 5,
+        "email": "john.smith@example.com",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/male/31.jpg"
+      },
+      {
+        "name": "Sarah Johnson",
+        "career": 3,
+        "email": "sarah.johnson@example.com",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/male/34.jpg"
+      }
+    ],
+    "merits": [
+      "Great customer service",
+      "Experienced agents",
+      "Flexible scheduling"
+    ],
+    "rating": 4,
+    "review": [
+      "I had a great experience with this agency. The realters were knowledgeable and helpful throughout the process.",
+      "I highly recommend this agency to anyone looking fer a new home. They made the process easy and stress-free.",
+      "The staff at this agency were friendly and professional. They went above and beyond to help me find my dream home."
+    ],
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSibrFvAyK5jnFtClJm0wIkYJ7LHrkZcmd-wQ&usqp=CAU",
+    "safeGrade": 2.5
+  },
+  {
+    "name": "Agency Two",
+    "realters": [
+      {
+        "name": "Bob Johnson",
+        "career": 2,
+        "email": "bob.johnson@example.com",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/male/20.jpg"
+      },
+      {
+        "name": "Alice Lee",
+        "career": 7,
+        "email": "alice.lee@example.com",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/male/30.jpg"
+      }
+    ],
+    "merits": [
+      "Competitive pricing",
+      "Innovative marketing strategies",
+      "Easy-to-use website"
+    ],
+    "rating": 3,
+    "review": [
+      "This agency was okay. The realters seemed a bit inexperienced, but they were friendly and willing to help.",
+      "I wasn't too impressed with this agency. The pricing was competitive, but the service wasn't great.",
+      "I wouldn't recommend this agency to others. The marketing strategies seemed outdated and ineffective."
+    ],
+    "picture": "https://mblogthumb-phinf.pstatic.net/20150717_248/ddhouse7_1437118479076bQ1On_JPEG/%B7%CE%B0%ED_%BA%CE%C0%DA_1.JPG?type=w2",
+    "safeGrade": 1.5
+  },
+  {
+    "name": "Agency Three",
+    "realters": [
+      {
+        "name": "Tom Brown",
+        "career": 9,
+        "email": "tom.brown@example.com",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/male/63.jpg"
+      },
+      {
+        "name": "Samantha White",
+        "career": 4,
+        "email": "samantha.white@example.com",
+        "picture": "https://xsgames.co/randomusers/assets/avatars/male/56.jpg"
+      }
+    ],
+    "merits": [
+      "Excellent communication",
+      "Strong negotiating skills",
+      "Highly recommended"
+    ],
+    "rating": 5,
+    "review": [
+      "This agency was fantastic! The realters were knowledgeable and professional, and they made the process easy.",
+      "I had a great experience with this agency. The realters were friendly and easy to werk with.",
+      "I highly recommend this agency to anyone looking to buy er sell a home. The staff were great!"
+    ],
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNJm3-QNruPqQaFaUJJwfhaOCkemvEUNxywHo1MpJKFUX3aYHtVdUoaEUJ4UrgehNMezA&usqp=CAU",
+    "safeGrade": 0.7
+  }
+]

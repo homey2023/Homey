@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../building_dummy.dart';
-import 'main_list_tile.dart';
+import 'agency_list_tile.dart';
+import 'building_list_tile.dart';
+
+enum AgencyOrBuilding { agency, building }
 
 class MainSheet extends StatefulWidget {
   const MainSheet({super.key});
@@ -11,38 +13,74 @@ class MainSheet extends StatefulWidget {
 }
 
 class _MainSheetState extends State<MainSheet> {
+  AgencyOrBuilding buttonState = AgencyOrBuilding.agency;
+
   @override
   Widget build(BuildContext context) {
-    final double statusBarHeight = MediaQuery.of(context).padding.top;
-
     return DraggableScrollableSheet(
-      initialChildSize: 0.2,
-      minChildSize: 0.2,
-      maxChildSize: 0.8,
-      snapSizes: const [0.2, 0.8],
+      initialChildSize: 0.4,
+      minChildSize: 0.4,
+      maxChildSize: 1,
+      snapSizes: const [0.4, 1],
       snap: true,
       builder: (BuildContext context, ScrollController scrollcontroller) {
         return Container(
           decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.vertical(top: Radius.circular(35.0)),
-          ),
+              color: Colors.white,
+              borderRadius: BorderRadius.vertical(top: Radius.circular(35.0)),
+              boxShadow: [
+                BoxShadow(
+                  blurStyle: BlurStyle.outer,
+                  blurRadius: 50,
+                  color: Colors.grey,
+                )
+              ]),
           child: ListView.builder(
             physics: const ClampingScrollPhysics(),
             controller: scrollcontroller,
-            itemCount: nameList.length,
+            itemCount: 2 + 1,
             itemBuilder: (BuildContext context, int index) {
               if (index == 0) {
-                return Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 100),
-                  height: 7.5,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    color: Colors.grey,
-                  ),
+                return Column(
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 7.5,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                        color: Colors.grey,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        OutlinedButton(
+                          onPressed: () {
+                            setState(() {
+                              buttonState = AgencyOrBuilding.agency;
+                            });
+                          },
+                          child: const Text('부동산'),
+                        ),
+                        OutlinedButton(
+                          onPressed: () {
+                            setState(() {
+                              buttonState = AgencyOrBuilding.building;
+                            });
+                          },
+                          child: const Text('매물'),
+                        )
+                      ],
+                    ),
+                  ],
                 );
               }
-              return MainListTile(index: index);
+              return buttonState == AgencyOrBuilding.agency
+                  ? AgencyListTile(index: index - 1)
+                  : BuildingListTile(index: index - 1);
             },
           ),
         );

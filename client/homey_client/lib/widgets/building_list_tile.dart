@@ -4,8 +4,8 @@ import '../building_dummy.dart';
 import '../models/building.dart';
 import '../screens/building_detail_page.dart';
 
-class MainListTile extends StatelessWidget {
-  MainListTile({super.key, required this.index});
+class BuildingListTile extends StatelessWidget {
+  BuildingListTile({super.key, required this.index});
 
   int index;
 
