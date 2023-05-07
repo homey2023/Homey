@@ -63,8 +63,8 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: const [
-          MainMap(),
+        children: [
+          MainMap(currentLocation: currentLocation),
           MainSheet(),
         ],
       ),

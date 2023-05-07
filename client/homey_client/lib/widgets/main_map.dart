@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 
-class MainMap extends StatefulWidget {
-  const MainMap({super.key});
+class MainMap extends StatelessWidget {
+  MainMap({super.key, this.currentLocation});
 
-  @override
-  State<MainMap> createState() => _MainMapState();
-}
-
-class _MainMapState extends State<MainMap> {
   LocationData? currentLocation;
 
   @override
@@ -17,7 +12,7 @@ class _MainMapState extends State<MainMap> {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         return SizedBox(
-          height: constraints.maxHeight * 0.7,
+          height: constraints.maxHeight * 0.85,
           child: currentLocation == null // 현재 위치가 없다면 loading. 있으면 지도 띄움
               ? const Center(
                   child: Text('loading'),

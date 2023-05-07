@@ -18,14 +18,14 @@ class _MainSheetState extends State<MainSheet> {
     return DraggableScrollableSheet(
       initialChildSize: 0.2,
       minChildSize: 0.2,
-      maxChildSize: 1,
-      snapSizes: const [0.2, 1],
+      maxChildSize: 0.8,
+      snapSizes: const [0.2, 0.8],
       snap: true,
       builder: (BuildContext context, ScrollController scrollcontroller) {
         return Container(
           decoration: const BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.vertical(top: Radius.circular(16.0)),
+            color: Colors.white,
+            borderRadius: BorderRadius.vertical(top: Radius.circular(35.0)),
           ),
           child: ListView.builder(
             physics: const ClampingScrollPhysics(),
@@ -33,17 +33,12 @@ class _MainSheetState extends State<MainSheet> {
             itemCount: nameList.length,
             itemBuilder: (BuildContext context, int index) {
               if (index == 0) {
-                return Padding(
-                  padding: EdgeInsets.only(top: statusBarHeight),
-                  child: Column(
-                    children: const [
-                      SizedBox(
-                        width: 50,
-                        child: Divider(
-                          thickness: 5,
-                        ),
-                      ),
-                    ],
+                return Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 100),
+                  height: 7.5,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                    color: Colors.grey,
                   ),
                 );
               }
