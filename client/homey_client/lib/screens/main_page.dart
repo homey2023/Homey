@@ -57,7 +57,6 @@ class _MainPageState extends State<MainPage> {
     getCurrentLocation();
   }
 
-
   // MainMap은 위에 나오는 지도위젯이고,
   // MainSheet는 아래에 나오는 목록위젯입니다.
   @override
