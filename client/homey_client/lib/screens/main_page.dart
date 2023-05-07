@@ -14,7 +14,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  // 현재위치 변수
+  // 현재 위치 변수
   LocationData? currentLocation;
 
   // 위치 권한 요청하는 함수
@@ -49,7 +49,7 @@ class _MainPageState extends State<MainPage> {
     });
   }
 
-  // 맨처음 페이지에 들어오면 실행하는 함수
+  // 처음 페이지에 들어오면 실행하는 함수
   @override
   void initState() {
     super.initState();
