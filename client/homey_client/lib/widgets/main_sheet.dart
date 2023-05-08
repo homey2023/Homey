@@ -18,14 +18,22 @@ class _MainSheetState extends State<MainSheet> {
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
+<<<<<<< HEAD
       initialChildSize: 0.4,
       minChildSize: 0.4,
       maxChildSize: 1,
       snapSizes: const [0.4, 1],
+=======
+      initialChildSize: 0.2,
+      minChildSize: 0.2,
+      maxChildSize: 1,
+      snapSizes: const [0.2, 1],
+>>>>>>> parent of ce65c65 (4th Upload)
       snap: true,
       builder: (BuildContext context, ScrollController scrollcontroller) {
         return Container(
           decoration: const BoxDecoration(
+<<<<<<< HEAD
               color: Colors.white,
               borderRadius: BorderRadius.vertical(top: Radius.circular(35.0)),
               boxShadow: [
@@ -35,12 +43,18 @@ class _MainSheetState extends State<MainSheet> {
                   color: Colors.grey,
                 )
               ]),
+=======
+            color: Colors.black,
+            borderRadius: BorderRadius.vertical(top: Radius.circular(16.0)),
+          ),
+>>>>>>> parent of ce65c65 (4th Upload)
           child: ListView.builder(
             physics: const ClampingScrollPhysics(),
             controller: scrollcontroller,
             itemCount: 2 + 1,
             itemBuilder: (BuildContext context, int index) {
               if (index == 0) {
+<<<<<<< HEAD
                 return Column(
                   children: [
                     Container(
@@ -76,6 +90,20 @@ class _MainSheetState extends State<MainSheet> {
                       ],
                     ),
                   ],
+=======
+                return Padding(
+                  padding: EdgeInsets.only(top: statusBarHeight),
+                  child: Column(
+                    children: const [
+                      SizedBox(
+                        width: 50,
+                        child: Divider(
+                          thickness: 5,
+                        ),
+                      ),
+                    ],
+                  ),
+>>>>>>> parent of ce65c65 (4th Upload)
                 );
               }
               return buttonState == AgencyOrBuilding.agency

@@ -63,9 +63,15 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
+<<<<<<< HEAD
         children: [
           MainMap(currentLocation: currentLocation),
           const MainSheet(),
+=======
+        children: const [
+          MainMap(),
+          MainSheet(),
+>>>>>>> parent of ce65c65 (4th Upload)
         ],
       ),
     );

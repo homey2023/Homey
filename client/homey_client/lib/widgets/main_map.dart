@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 
-class MainMap extends StatelessWidget {
-  MainMap({super.key, this.currentLocation});
+class MainMap extends StatefulWidget {
+  const MainMap({super.key});
 
+  @override
+  State<MainMap> createState() => _MainMapState();
+}
+
+class _MainMapState extends State<MainMap> {
   LocationData? currentLocation;
 
   @override
