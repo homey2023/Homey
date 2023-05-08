@@ -1,5 +1,8 @@
-from flask import Flask
-from flask_restx import Api
+from flask import Flask, request
+from flask_restx import Api, Resource, fields, Namespace
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+import config
 from apis.login import login_api
 from apis.board import board_api
 from apis.real_estate import real_estate_api
@@ -14,7 +17,16 @@ api = Api(
     terms_url="/",
     contact="seungjaelim@kaist.ac.kr",
     license="MIT"
-    )
+)
+
+uri = f"mongodb+srv://{getattr(config, 'MONGODB_USERNAME')}:{getattr(config, 'MONGODB_PASSWORD')}@{getattr(config, 'MONGODB_CLUSTER')}.mongodb.net/?retryWrites=true&w=majority"
+# Create a MongoClient object using the configuration variables
+client = MongoClient(uri, server_api=ServerApi('1'))
+
+# Access your MongoDB Atlas database and collection using the client object
+db = client.my_database
+real_estate_collection = db.real_estate
+agents_collection = db.agents
 
 api.add_namespace(login_api)
 api.add_namespace(board_api)
@@ -22,4 +34,10 @@ api.add_namespace(real_estate_api)
 api.add_namespace(agents_api)
 
 if __name__ == "__main__":
+    # Send a ping to confirm a successful connection
+    try:
+        client.admin.command('ping')
+        print("Pinged your deployment. You successfully connected to MongoDB!")
+    except Exception as e:
+        print(e)
     app.run(debug=True, host='0.0.0.0', port=5050)
