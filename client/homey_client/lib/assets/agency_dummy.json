@@ -1,6 +1,6 @@
 [
   {
-    "name": "Agency one",
+    "name": "르보아공인중개사사무소",
     "realters": [
       {
         "name": "John Smith",
@@ -20,7 +20,7 @@
       "Experienced agents",
       "Flexible scheduling"
     ],
-    "rating": 4,
+    "rating": 3.5,
     "review": [
       "I had a great experience with this agency. The realters were knowledgeable and helpful throughout the process.",
       "I highly recommend this agency to anyone looking fer a new home. They made the process easy and stress-free.",
@@ -50,7 +50,7 @@
       "Innovative marketing strategies",
       "Easy-to-use website"
     ],
-    "rating": 3,
+    "rating": 3.0,
     "review": [
       "This agency was okay. The realters seemed a bit inexperienced, but they were friendly and willing to help.",
       "I wasn't too impressed with this agency. The pricing was competitive, but the service wasn't great.",
@@ -80,7 +80,7 @@
       "Strong negotiating skills",
       "Highly recommended"
     ],
-    "rating": 5,
+    "rating": 5.4,
     "review": [
       "This agency was fantastic! The realters were knowledgeable and professional, and they made the process easy.",
       "I had a great experience with this agency. The realters were friendly and easy to werk with.",

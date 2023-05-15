@@ -20,13 +20,6 @@ class _AgencyListTileState extends State<AgencyListTile> {
 
   // 부동산 데이터 불러오는 함수
   void getAgencyData() async {
-    // rootBundle.loadString('assets/agency_dummy.json').then((data) {
-    //   setState(() {
-    //     agencies = json.decode(data);
-    //   });
-    //   debugPrint(agencies.toString());
-    // });
-
     String jsonString =
         await rootBundle.loadString('lib/assets/agency_dummy.json');
 

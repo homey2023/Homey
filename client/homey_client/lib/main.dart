@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:homey_client/screens/home.dart'; // 매물 소개 페이지
+
+import 'screens/home.dart';
 
 void main() async {
   runApp(const MyApp());
