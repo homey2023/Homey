@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homey_client/config/palette.dart';
 
 import 'agency_list_tile.dart';
 import 'building_list_tile.dart';
@@ -63,7 +64,10 @@ class _DraggableSheetState extends State<DraggableSheet> {
                               buttonState = AgencyOrBuilding.agency;
                             });
                           },
-                          child: const Text('부동산'),
+                          child: const Text(
+                            '부동산',
+                            style: TextStyle(color: Palette.mainColor),
+                          ),
                         ),
                         OutlinedButton(
                           onPressed: () {
@@ -71,7 +75,10 @@ class _DraggableSheetState extends State<DraggableSheet> {
                               buttonState = AgencyOrBuilding.building;
                             });
                           },
-                          child: const Text('매물'),
+                          child: const Text(
+                            '매물',
+                            style: TextStyle(color: Palette.mainColor),
+                          ),
                         )
                       ],
                     ),

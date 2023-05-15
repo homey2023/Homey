@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homey_client/config/palette.dart';
 
 class UpColumn extends StatefulWidget {
   const UpColumn({
@@ -49,14 +50,14 @@ class _UpColumnState extends State<UpColumn> {
             children: [
               const Icon(
                 Icons.article_outlined,
-                color: Colors.indigo,
+                color: Palette.mainColor,
               ),
               const SizedBox(
                 width: 15,
               ),
               const Text(
                 '인증된 부동산입니다',
-                style: TextStyle(color: Colors.indigo, fontSize: 12),
+                style: TextStyle(color: Palette.mainColor, fontSize: 12),
               ),
               const SizedBox(
                 width: 60,
@@ -69,7 +70,7 @@ class _UpColumnState extends State<UpColumn> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 13, vertical: 7),
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  backgroundColor: Colors.indigo,
+                  backgroundColor: Palette.mainColor,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
                 ),

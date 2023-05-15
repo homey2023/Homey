@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homey_client/config/palette.dart';
 
 import 'around.dart';
 import 'profile.dart';
@@ -32,6 +33,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: _buildBody(),
       bottomNavigationBar: BottomNavigationBar(
+        fixedColor: Palette.mainColor,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on),

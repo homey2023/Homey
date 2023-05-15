@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homey_client/config/palette.dart';
 
 import '../widgets/up_column.dart';
 
@@ -57,9 +58,9 @@ class _AgencyDetailState extends State<AgencyDetail>
             height: 10,
           ),
           TabBar(
-            labelColor: Colors.indigo,
+            labelColor: Palette.mainColor,
             unselectedLabelColor: Colors.grey,
-            indicatorColor: Colors.indigo,
+            indicatorColor: Palette.mainColor,
             tabs: const <Tab>[
               Tab(text: '정보'),
               Tab(text: '거래 후기'),
@@ -117,15 +118,15 @@ class _AgencyDetailState extends State<AgencyDetail>
                         children: [
                           const Icon(
                             Icons.article_outlined,
-                            color: Colors.indigo,
+                            color: Palette.mainColor,
                           ),
                           const SizedBox(
                             width: 15,
                           ),
                           const Text(
                             '인증된 공인중개사입니다',
-                            style:
-                                TextStyle(color: Colors.indigo, fontSize: 12),
+                            style: TextStyle(
+                                color: Palette.mainColor, fontSize: 12),
                           ),
                           const SizedBox(
                             width: 30,
@@ -138,7 +139,7 @@ class _AgencyDetailState extends State<AgencyDetail>
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 13, vertical: 7),
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                              backgroundColor: Colors.indigo,
+                              backgroundColor: Palette.mainColor,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10.0)),
                             ),
