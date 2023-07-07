@@ -1,4 +1,4 @@
-store,sido,sigungu,sigungu_code,call,related_police,specified_year,availability,datetime,lot_addr,depth1,depth2,depth3_legal,depth3_admin,road_addr,roadname,x,y
+store,sido,sigungu,sigungu_code,call,related_police,specified_year,availability,datetime,lot_addr,depth1,depth2,depth3_legal,depth3_admin,road_addr,roadname,longitude,latitude
 CU 관악낙성점,서울특별시,관악구,11620,02-889-1069,관악경찰서,,Y,2022-09-28,서울특별시 관악구 봉천동,서울특별시,관악구,봉천동,행운동,서울특별시 관악구 솔밭로 5,솔밭로,126.962569741548,37.478183524472
 CU 관악리베로점,서울특별시,관악구,11620,02-882-9718,관악경찰서,,Y,2022-09-28,서울특별시 관악구 신림동,서울특별시,관악구,신림동,신림동,서울특별시 관악구 신림동길 38,신림동길,126.924458373873,37.4868902216568
 CU 관악미림점,서울특별시,관악구,11620,02-883-1032,관악경찰서,,Y,2022-09-28,서울특별시 관악구 신림동,서울특별시,관악구,신림동,대학동,서울특별시 관악구 호암로20길 1,호암로20길,126.932163482267,37.467793136754

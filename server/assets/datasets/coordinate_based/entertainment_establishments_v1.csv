@@ -1,4 +1,4 @@
-manage_no,approval_date,cancellation_date,business_state,detailed_state,closed_date,break_start,break_end,reopened_date,phone_no,store_size,postal_code,address,road_address,road_addr_postal_code,name,updated_date,renewed_date,type,coords_X,coords_Y
+manage_no,approval_date,cancellation_date,business_state,detailed_state,closed_date,break_start,break_end,reopened_date,phone_no,store_size,postal_code,address,road_address,road_addr_postal_code,name,updated_date,renewed_date,type,latitude,longitude
 관리번호,인허가일자,인허가취소일자,영업상태명,상세영업상태명,폐업일자,휴업시작일자,휴업종료일자,재개업일자,전화번호,소재지면적,소재지우편번호,지번주소,도로명주소,도로명우편번호,사업장명,최종수정일자,데이터갱신일자,업태구분명,좌표정보(X),좌표정보(Y)
 3220000-102-2018-00006,2018-12-11,,영업/정상,영업,,,,,,311.39,135-915,"서울특별시 강남구 역삼동 678-24 늘봄빌딩 2,3층","서울특별시 강남구 테헤란로27길 8-4, 늘봄빌딩 (2,3층) (역삼동)",06141,제이씨(JC),2023-02-28 13:31:33,2022-12-03 00:03:00.0,룸살롱,203330.125,444424.745
 3230000-102-2017-00004,2017-05-31,,영업/정상,영업,,,,,,85.41,138-805,서울특별시 송파구 가락동 98-7,"서울특별시 송파구 송파대로28길 13, 지하1층 101호 (가락동, 거북이빌딩)",05719,골드1,2023-02-28 16:45:55,2022-12-03 00:03:00.0,룸살롱,210491.321883503,443569.763243482
