@@ -7,6 +7,7 @@ from apis.login import login_api
 from apis.board import board_api
 from apis.real_estate import real_estate_api
 from apis.agents import agents_api
+from apis.home_safety_rating import home_safety_rating_api 
 
 app = Flask(__name__)
 api = Api(
@@ -19,6 +20,7 @@ api = Api(
     license="MIT"
 )
 
+'''
 uri = f"mongodb+srv://{getattr(config, 'MONGODB_USERNAME')}:{getattr(config, 'MONGODB_PASSWORD')}@{getattr(config, 'MONGODB_CLUSTER')}.mongodb.net/?retryWrites=true&w=majority"
 # Create a MongoClient object using the configuration variables
 client = MongoClient(uri, server_api=ServerApi('1'))
@@ -27,16 +29,17 @@ client = MongoClient(uri, server_api=ServerApi('1'))
 db = client.my_database
 real_estate_collection = db.real_estate
 agents_collection = db.agents
-
+'''
 api.add_namespace(login_api)
 api.add_namespace(board_api)
 api.add_namespace(real_estate_api)
 api.add_namespace(agents_api)
+api.add_namespace(home_safety_rating_api)
 
 if __name__ == "__main__":
     # Send a ping to confirm a successful connection
     try:
-        client.admin.command('ping')
+        # client.admin.command('ping')
         print("Pinged your deployment. You successfully connected to MongoDB!")
     except Exception as e:
         print(e)
