@@ -38,7 +38,7 @@ def haversine_vectorize(lat1, lon1, lat2, lon2):
     km = 6371 * c
     return km
 
-def count_place(latitude, longitude, radius=5,
+def count_place(latitude, longitude, radius=1,
     files = [
         "ansimee_cctv_v1.csv", 
         "emergency_bell_v1.csv",
