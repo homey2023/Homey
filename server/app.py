@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask_restx import Api, Resource, fields, Namespace
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-import config
+import config 
 from apis.login import login_api
 from apis.board import board_api
 from apis.real_estate import real_estate_api
@@ -19,6 +19,11 @@ api = Api(
     contact="seungjaelim@kaist.ac.kr",
     license="MIT"
 )
+USER_NAME = config.MONGODB_USERNAME
+PASSWORD = config.MONGODB_PASSWORD
+
+client = MongoClient(f'mondogb://{USER_NAME}:{PASSWORD}@43.202.53.29', 27017)
+#db = client.
 
 '''
 uri = f"mongodb+srv://{getattr(config, 'MONGODB_USERNAME')}:{getattr(config, 'MONGODB_PASSWORD')}@{getattr(config, 'MONGODB_CLUSTER')}.mongodb.net/?retryWrites=true&w=majority"
