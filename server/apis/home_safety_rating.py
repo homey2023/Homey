@@ -13,7 +13,7 @@ from flask import request
 from flask import jsonify
 from flask_restx import Namespace, Resource
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-from dataloader.dataloader import count_place  # Update the import statement
+from dataloader.dataloader import count_place, score_with_weights  # Update the import statement
 import numpy as np
 
 home_safety_rating_api = Namespace('home_safety_rating')
@@ -74,8 +74,54 @@ class Rating(Resource):
         # Calculate the rating
         counts = list(result.values())
         rating = sum(counts) / len(counts) if counts else 0
+        #return result
+        #return {"rating": rating}
+
+@home_safety_rating_api.route('/score')
+class Rating(Resource):
+    """
+    Rating resource for the Home Safety Rating API.
+
+    Provides a safety rating for a specific geographical location, 
+    based on the count of various safety-related features around that location.
+    """
+    def get(self):
+        """
+        Fetch the safety rating for a specific location.
+
+        Query Parameters:
+        latitude -- the latitude of the location
+        longitude -- the longitude of the location
+
+        Returns:
+        A JSON object containing the safety rating.
+        """
+        # Get latitude and longitude from the query parameters
+        latitude = float(request.args.get('latitude'))
+        longitude = float(request.args.get('longitude'))
+
+        # Call the dataloader function
+        result = count_place(latitude, longitude)
+
+        # Add additional information to the result
+        add_info = {}
+
+        add_info['doorLock'] = int(request.args.get('doorLock')) # 1 if there is a door lock else 0
+        add_info['keypad'] = int(request.args.get('keyPad')) # 1 if there is a key pad else 0
+        add_info['frontCCTV'] = int(request.args.get('frontCCTV')) # 1 if there is a cctv at the front else 0
+        add_info['deliveryBox'] = int(request.args.get('deliveryBox')) # 1 if there is a delivery box else 0
         
-        return {"rating": rating}
+
+        result.update(add_info)
+        score = score_with_weights(result)
+
+
+        # Calculate the rating
+        #counts = list(result.values())
+        #rating = sum(counts) / len(counts) if counts else 0
+        return score
+        #return {"rating": rating}
+
 
 @home_safety_rating_api.route('/anomaly')
 class Anomaly(Resource):

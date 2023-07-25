@@ -48,7 +48,7 @@ def count_place(latitude, longitude, radius=1,
         "street_lamp_v1.csv", 
         "women_protective_house_v1.csv",
         "women_protective_parcel_v1.csv",
-        "bus_stop_v2.csv"
+        "bus_stop_v1.csv"
     ]):
     """
     Count the number of geographical features from various .csv files 
@@ -85,3 +85,23 @@ def count_place(latitude, longitude, radius=1,
         
         results[file] = count
     return results
+
+
+def score_with_weights(results):
+    score = 0
+    score += results['ansimee_cctv_v1.csv'] * 5 
+    score += results['emergency_bell_v1.csv'] * 30
+    score += results['entertainment_establishments_v1.csv'] * (-30)
+    score += results['police_office_v1.csv'] * 80
+    score += results['safety_center_v1.csv'] * 80
+    score += results['street_lamp_v1.csv'] * 20
+    score += results['women_protective_house_v1.csv'] * 60
+    score += results['women_protective_parcel_v1.csv'] * 30
+    score += results['bus_stop_v1.csv'] * 50
+    
+    score += results['doorLock'] * 130
+    score += results['keypad'] * 100
+    score += results['frontCCTV'] * 100
+    score += results['deliveryBox']  * 50
+
+    return score
