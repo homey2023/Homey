@@ -48,7 +48,7 @@ def count_place(latitude, longitude, radius=1,
         "street_lamp_v1.csv", 
         "women_protective_house_v1.csv",
         "women_protective_parcel_v1.csv",
-        "bus_stop_v1.csv"
+        "bus_stop_v2.csv"
     ]):
     """
     Count the number of geographical features from various .csv files 
