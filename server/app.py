@@ -8,7 +8,7 @@ from apis.board import board_api
 from apis.real_estate import real_estate_api
 from apis.agents import agents_api
 from apis.home_safety_rating import home_safety_rating_api 
-
+from apis.register_user import register_user_api
 app = Flask(__name__)
 api = Api(
     app,
@@ -22,9 +22,10 @@ api = Api(
 USER_NAME = config.MONGODB_USERNAME
 PASSWORD = config.MONGODB_PASSWORD
 
-client = MongoClient(f'mondogb://{USER_NAME}:{PASSWORD}@43.202.53.29', 27017)
-#db = client.
-
+#client = MongoClient(f'mongodb://{USER_NAME}:{PASSWORD}@43.202.53.29', 27017, tlsInsecure= True)
+#db = client.homey
+#print(client)
+#print(client.list_database_names())
 '''
 uri = f"mongodb+srv://{getattr(config, 'MONGODB_USERNAME')}:{getattr(config, 'MONGODB_PASSWORD')}@{getattr(config, 'MONGODB_CLUSTER')}.mongodb.net/?retryWrites=true&w=majority"
 # Create a MongoClient object using the configuration variables
@@ -40,7 +41,7 @@ api.add_namespace(board_api)
 api.add_namespace(real_estate_api)
 api.add_namespace(agents_api)
 api.add_namespace(home_safety_rating_api)
-
+api.add_namespace(register_user_api)
 if __name__ == "__main__":
     # Send a ping to confirm a successful connection
     try:
