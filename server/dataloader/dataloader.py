@@ -88,20 +88,31 @@ def count_place(latitude, longitude, radius=1,
 
 
 def score_with_weights(results):
-    score = 0
-    score += results['ansimee_cctv_v1.csv'] * 5 
-    score += results['emergency_bell_v1.csv'] * 30
-    score += results['entertainment_establishments_v1.csv'] * (-30)
-    score += results['police_office_v1.csv'] * 80
-    score += results['safety_center_v1.csv'] * 80
-    score += results['street_lamp_v1.csv'] * 20
-    score += results['women_protective_house_v1.csv'] * 60
-    score += results['women_protective_parcel_v1.csv'] * 30
-    score += results['bus_stop_v1.csv'] * 50
-    
-    score += results['doorLock'] * 130
-    score += results['keypad'] * 100
-    score += results['frontCCTV'] * 100
-    score += results['deliveryBox']  * 50
+    score_result = {}
 
-    return score
+    location_score = 0
+    facility_score = 0
+    support_score = 0
+
+    location_score += results['entertainment_establishments_v1.csv'] * (-30)
+    location_score += results['police_office_v1.csv'] * 80
+    location_score += results['safety_center_v1.csv'] * 80
+    location_score += results['street_lamp_v1.csv'] * 20
+    location_score += results['bus_stop_v1.csv'] * 50
+    
+    facility_score += results['doorLock'] * 130
+    facility_score += results['keypad'] * 100
+    facility_score += results['frontCCTV'] * 100
+    facility_score += results['deliveryBox']  * 50
+
+    support_score += results['ansimee_cctv_v1.csv'] * 5 
+    support_score += results['emergency_bell_v1.csv'] * 30
+    support_score += results['women_protective_house_v1.csv'] * 60
+    support_score += results['women_protective_parcel_v1.csv'] * 30
+    
+    score_result['location score'] = location_score
+    score_result['facility score'] = facility_score
+    score_result['support score'] = support_score
+    score_result['total score'] = location_score + facility_score + support_score
+    
+    return score_result
