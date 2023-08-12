@@ -20,20 +20,22 @@ class Login(Resource):
     def post(self):
         # Code to handle user authentication
         if request.method == 'POST':
-            user_id = request.form.get("id")
-            user_email = request.form.get("email")
-            user_name = request.form.get('name')
-            user_found = users.find_one({'id': user_id})
+            userName = request.form.get("name")
+            authCode = request.form.get("authCode")
+            #user_email = request.form.get("email")
+            #user_name = request.form.get('name')
+            user_found = users.find_one({'authCode': authCode})
 
             #signup_user = user.find_one({'id': request.form['id']})
         
         if user_found:
             #message = 'Successful Login'
-            existId = True
-            return existId
+            #existId = True
+            return "This user already exists."
         else:
-            user_input = {'id': user_id, 'email': user_email, 'name': user_name}
+            user_input = {'username': userName, 'authCode': authCode}
             users.insert_one(user_input)
-        pass
+            return "success"
+        #pass
 
 

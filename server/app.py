@@ -2,13 +2,14 @@ from flask import Flask, request
 from flask_restx import Api, Resource, fields, Namespace
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-import config 
-from apis.login import login_api
+import db_config 
+from apis.auth import auth_api
 from apis.board import board_api
 from apis.real_estate import real_estate_api
 from apis.agents import agents_api
 from apis.home_safety_rating import home_safety_rating_api 
 from apis.register_user import register_user_api
+from apis.survey import survey_api 
 app = Flask(__name__)
 api = Api(
     app,
@@ -19,8 +20,8 @@ api = Api(
     contact="seungjaelim@kaist.ac.kr",
     license="MIT"
 )
-USER_NAME = config.MONGODB_USERNAME
-PASSWORD = config.MONGODB_PASSWORD
+#USER_NAME = config.MONGODB_USERNAME
+#PASSWORD = config.MONGODB_PASSWORD
 
 #client = MongoClient(f'mongodb://{USER_NAME}:{PASSWORD}@43.202.53.29', 27017, tlsInsecure= True)
 #db = client.homey
@@ -36,12 +37,13 @@ db = client.my_database
 real_estate_collection = db.real_estate
 agents_collection = db.agents
 '''
-api.add_namespace(login_api)
+api.add_namespace(auth_api)
 api.add_namespace(board_api)
 api.add_namespace(real_estate_api)
 api.add_namespace(agents_api)
 api.add_namespace(home_safety_rating_api)
 api.add_namespace(register_user_api)
+api.add_namespace(survey_api)
 if __name__ == "__main__":
     # Send a ping to confirm a successful connection
     try:
